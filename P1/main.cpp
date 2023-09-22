@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ordenacionSeleccion.hpp"
+#include "ClaseTiempo.cpp"
 
 using namespace std;
 
@@ -7,7 +8,7 @@ int main(){
 
     Clock time;
     int opt=-1;
-    srand(time=0);
+    //srand(time)=0;
 
     while(opt!=0){
         cout<<"Introduzca el algoritmo a comprobar"<<endl;

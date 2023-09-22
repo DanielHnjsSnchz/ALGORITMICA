@@ -52,7 +52,7 @@ void rellenarVector(vector<int> &v){
 
     for(unsigned int i = 0; i < v.size(); i++){
         //numero random
-        v[i]=0+rand()%(10000000-1);
+        v[i]=rand()%(10000000-1);
     }
 
 }
@@ -71,14 +71,8 @@ bool estaOrdenado(const vector<int> &v){
 //
 //TIEMPO DE ORDENACION
 //
-void tiemposOrdenacionSeleccion(int nMin, int nMax, int repeticiones, vector<double> &tiemposReales,vector<double> &numeroElementos){
-
-}
-
-void tiemposOrdenacionSelección(int nMin, int nMax, int incremento, int
-repeticiones, vector <double> &tiemposReales, vector <double>
-&numeroElementos)
-{
+void tiemposOrdenacionSeleccion(int nMin, int nMax, int incremento, int repeticiones, vector <double> &tiemposReales, vector <double> &numeroElementos){
+Clock time;
 for(unsigned int a=nMin;a<=nMax;a+incremento){
     long double tiempoAcumulado=0;
     vector <int> v(a);
@@ -96,7 +90,7 @@ for(unsigned int a=nMin;a<=nMax;a+incremento){
                 
 	        }
         }  
-        tiemposReales.push_back(tiempoacumulado/repeticiones);
+        tiemposReales.push_back(tiempoAcumulado/repeticiones);
         numeroElementos.push_back(a);        
     }
 

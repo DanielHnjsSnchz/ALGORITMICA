@@ -6,6 +6,7 @@
 #include <cmath>
 #include <cstdlib>
 #include "funcionality.hpp"
+#include "ClaseTiempo.cpp"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ void ordenacionSeleccion();
 void ordenacionSeleccion(vector <int> &v);
 void rellenarVector(vector<int> &v);
 bool estaOrdenado(const vector<int> &v);
-void tiemposOrdenacionSeleccion(int nMin, int nMax, int repeticiones, vector<double> &tiemposReales,vector<double> &numeroElementos);
+void tiemposOrdenacionSeleccion(int nMin, int nMax, int incremento, int repeticiones, vector <double> &tiemposReales, vector <double> &numeroElementos);
 
 
 /*
