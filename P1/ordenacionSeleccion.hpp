@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include "funcionality.hpp"
 #include "ClaseTiempo.cpp"
+#include "ordenacionSeleccion.cpp"
 
 using namespace std;
 

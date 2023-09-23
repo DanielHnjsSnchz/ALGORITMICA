@@ -4,6 +4,63 @@
 using namespace std;
 
 
+//
+//RELLENAR VECTOR
+//
+void rellenarVector(vector<int> &v){
+
+    for(unsigned int i = 0; i < v.size(); i++){
+        //numero random
+        v[i]=rand()%(10000000-1);
+    }
+
+}
+//
+//COMPROBACION DE ORDENACION
+//
+bool estaOrdenado(const vector<int> &v){
+    /*for(vector<int>::iterator it=v.begin(); it != v.end(); ++it){
+        if(v[it+1]!= NULL){
+            if(v[it]>v[it+1])
+                return false;
+        }
+    }*/
+    for(size_t i=0; i <= v.size(); i++){
+        if(v[i]>v[i+1])
+             return false;
+    }
+    return true;
+}
+
+
+//
+//TIEMPO DE ORDENACION
+//
+void tiemposOrdenacionSeleccion(int nMin, int nMax, int incremento, int repeticiones, vector <double> &tiemposReales, vector <double> &numeroElementos){
+Clock time;
+for(int a=nMin;a<=nMax;a=a+incremento){
+    long double tiempoAcumulado=0;
+    vector <int> v(a);
+        for(int b=0;b<repeticiones;b++){
+            
+            rellenarVector(v);
+            time.restart();
+
+            void ordenacionSeleccion(vector <int> &v);
+
+            if (time.isStarted())
+	        {
+		        time.stop();
+                tiempoAcumulado+=time.elapsed();
+                
+	        }
+        }  
+        tiemposReales.push_back(tiempoAcumulado/repeticiones);
+        numeroElementos.push_back(a);        
+    }
+
+}
+
 void ordenacionSeleccion(vector <int> &v){
 
     int posicionMenor;
@@ -25,7 +82,7 @@ void ordenacionSeleccion(vector <int> &v){
 //ORDENACION SELECCION
 void ordenacionSeleccion(){
 
-    Clock time;
+    //Clock time;
     int nMin, nMax, incremento, repeticiones;
     vector <double> tiemposReales;
     vector <double> nElementos;
@@ -45,53 +102,5 @@ void ordenacionSeleccion(){
 }
             
     
-//
-//RELLENAR VECTOR
-//
-void rellenarVector(vector<int> &v){
 
-    for(unsigned int i = 0; i < v.size(); i++){
-        //numero random
-        v[i]=rand()%(10000000-1);
-    }
 
-}
-//
-//COMPROBACION DE ORDENACION
-//
-bool estaOrdenado(const vector<int> &v){
-    for(unsigned int i = 0; i < v.size(); i++){
-        if(v[i+1]!= NULL){
-            if(v[i]>v[i+1])
-                return false;
-        }
-    }
-    return true;
-}
-//
-//TIEMPO DE ORDENACION
-//
-void tiemposOrdenacionSeleccion(int nMin, int nMax, int incremento, int repeticiones, vector <double> &tiemposReales, vector <double> &numeroElementos){
-Clock time;
-for(unsigned int a=nMin;a<=nMax;a+incremento){
-    long double tiempoAcumulado=0;
-    vector <int> v(a);
-        for(unsigned int b=0;b<repeticiones;b++){
-            
-            rellenarVector(v);
-            time.restart();
-
-            void ordenacionSeleccion(vector <int> &v);
-
-            if (time.isStarted())
-	        {
-		        time.stop();
-                tiempoAcumulado+=time.elapsed();
-                
-	        }
-        }  
-        tiemposReales.push_back(tiempoAcumulado/repeticiones);
-        numeroElementos.push_back(a);        
-    }
-
-}
