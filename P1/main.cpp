@@ -8,7 +8,7 @@ int main(){
 
     //Clock time;
     int opt=-1;
-    //srand(time)=0;
+     std::srand(std::time(0));
 
     //while(opt!=4){
         cout<<"Introduzca el algoritmo a comprobar"<<endl;

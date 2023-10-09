@@ -10,9 +10,9 @@
 #include "sistemaEcuaciones.hpp"
 
 void matrizCuadrada();
-void matrizCuadrada(vector <int> &v);
-void rellenarMatriz(vector<int> &v);
-void tiemposCuadrado(int nMin, int nMax, int incremento, int repeticiones, vector <double> &tiemposReales, vector <double> &numeroElementos);
+void matrizCuadrada(vector <vector<double>> &matrizA,vector <vector<double>> &matrizR);
+void rellenarMatriz(vector <vector<double>> &m);
+void tiemposCuadrado(int nMin, int nMax, int incremento, vector <double> &tiemposReales, vector <double> &numeroElementos);
 void ficheroTiemposReales(vector <double> &tiemposReales, vector <double> &numeroElementos);
 void ficheroDatosFinales(vector <double> &numeroElementos, vector <double> &tiemposReales, vector <double> &tiemposEstimados);
 

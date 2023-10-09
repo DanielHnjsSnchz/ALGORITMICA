@@ -1,5 +1,4 @@
 #include "ordenacionSeleccion.hpp"
-#include "funcionality.hpp"
 
 using namespace std;
 
@@ -184,7 +183,7 @@ void crearMatrizA(const vector<double> &numeroElementos,const vector<double> &ti
                 matrizA[i][j] = numeroElementos.size();
             }
             else{
-                matrizA[i][j] = sumatorio(numeroElementos, tiemposReales, i+j, 0);
+                matrizA[i][j] = sum(numeroElementos, tiemposReales, i+j, 0);
             }
         }
 
@@ -196,7 +195,7 @@ void crearMatrizB(const vector<double> &numeroElementos,const vector<double> &ti
 
     for(int i = 0; i < matrizB.size();i++){
 
-        matrizB[i][0] = sumatorio(numeroElementos,tiemposReales,i,1);
+        matrizB[i][0] = sum(numeroElementos,tiemposReales,i,1);
 
     }
 
@@ -227,7 +226,7 @@ void ajusteCuadratico(const vector<double> &numeroElementos, const vector<double
 }
 
 
-double sumatorio(const vector<double> &n,const vector <double> &t, int expN, int expT){
+double sum(const vector<double> &n,const vector <double> &t, int expN, int expT){
 
     double sum = 0;
 
