@@ -1,0 +1,7 @@
+Tamaño Ejemplar    Tiempo Real     Tiempos Estimados
+1                      11                      11.0429
+3                      22                      21.8286
+5                      32                      32.2571
+7                      43                      42.8286
+9                      54                      54.0429
+0                      0                      0

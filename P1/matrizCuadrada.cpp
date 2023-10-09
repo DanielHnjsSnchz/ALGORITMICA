@@ -146,13 +146,14 @@ void matrizCuadrada(){
 
     calcularTiemposEstimadosPolinomico2(nElementos, a, tiemposEstimados);
 
-    ficheroDatosFinalesMatriz(nElementos, tiemposReales, tiemposEstimados);
-
     double sigma = calcularCoeficienteDeDeterminacion2(tiemposReales, tiemposEstimados);
 
     cout << endl;
     cout << "El coeficiente de determinación es de " << sigma << endl;
     cout << "f(n) = " << a[0] << " + " << a[1] << " * n + "<< a[2] << " * n2 + "<< a[3] << " * n3 + " << endl;
+
+    ficheroDatosFinalesMatriz(nElementos, tiemposReales, tiemposEstimados);
+    //mostrarGrafica("script_gnuplotSeleccion.sh");
 
     double n;
 
@@ -180,7 +181,7 @@ void crearMatrizA2(const vector<double> &numeroElementos,const vector<double> &t
     for(auto i = 0; i < matrizA.size();i++){
 
         for(auto j = 0; j < matrizA.size();j++){
-
+            cout<<"a2"<<endl;
             if(i==0 && j==0){
                 matrizA[i][j] = numeroElementos.size();
             }

@@ -161,13 +161,14 @@ void ordenacionSeleccion(){
 
     calcularTiemposEstimadosPolinomico(nElementos, a, tiemposEstimados);
 
-    ficheroDatosFinales(nElementos, tiemposReales, tiemposEstimados);
-
     double sigma = calcularCoeficienteDeDeterminacion(tiemposReales, tiemposEstimados);
 
     cout << endl;
-    cout << "El coeficiente de determinación es de " << sigma << endl;
+    cout << "El coeficiente de determinación es de " << 1-sigma << endl;
     cout << "f(n) = " << a[0] << " + " << a[1] << " * n + "<< a[2] << " * n2" << endl;
+
+    ficheroDatosFinales(nElementos, tiemposReales, tiemposEstimados);
+    //mostrarGrafica("script_gnuplotSeleccion.sh");
 
     double n;
 
