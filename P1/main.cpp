@@ -1,12 +1,12 @@
 #include <iostream>
 #include "ordenacionSeleccion.hpp"
-#include "ClaseTiempo.cpp"
+//#include "ClaseTiempo.cpp"
 
 using namespace std;
 
 int main(){
 
-    Clock time;
+    //Clock time;
     int opt=-1;
     //srand(time)=0;
 
@@ -21,14 +21,14 @@ int main(){
 
     switch(opt){
         case 1:
+        
             ordenacionSeleccion();
-            
             
         case 2:
 
         case 3:
 
         case 0:
-    }
-
+            return 0;
+    };
 }
