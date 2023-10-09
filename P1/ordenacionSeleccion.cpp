@@ -34,7 +34,7 @@ void ficheroDatosFinales(vector <double> &numeroElementos, vector <double> &tiem
 
     for(auto i=0; i < numeroElementos.size(); i++){
 
-        f << numeroElementos[i] << "\t" << tiemposReales[i] << "\t" << tiemposEstimados[i] << endl;
+        f << numeroElementos[i] << "                      " << tiemposReales[i] << "                      " << tiemposEstimados[i] << endl;
     }
 
     f.close();
@@ -239,12 +239,10 @@ void ordenacionSeleccion(){
 
 void crearMatrizA(const vector<double> &numeroElementos,const vector<double> &tiemposReales,vector <vector<double>> &matrizA){   
 
-    cout<<"Creando matriz A..."<<endl;
+    for(auto i = 0; i < matrizA.size();i++){
 
-    for(int i = 0; i < numeroElementos.size();i++){
-        cout<<"CFor1..."<<endl;
-        for(int j = 0; j < tiemposReales.size();j++){
-            cout<<"CFor2..."<<endl;
+        for(auto j = 0; j < matrizA.size();j++){
+
             if(i==0 && j==0){
                 matrizA[i][j] = numeroElementos.size();
             }
@@ -259,16 +257,9 @@ void crearMatrizA(const vector<double> &numeroElementos,const vector<double> &ti
 
 void crearMatrizB(const vector<double> &numeroElementos,const vector<double> &tiemposReales,vector <vector<double>> &matrizB){
 
-//int ordenMatriz = numeroElementos.size()+tiemposReales.size();    
-    cout<<"Creando matriz B..."<<endl;
+    for(int i = 0; i < matrizB.size();i++){
 
-    for(int i = 0; i < numeroElementos.size();i++){
-
-        for(int j = 0; j < tiemposReales.size();j++){
-
-            matrizB[i][0] = sumatorio(numeroElementos,tiemposReales,i,1);
-
-        }
+        matrizB[i][0] = sumatorio(numeroElementos,tiemposReales,i,1);
 
     }
 
