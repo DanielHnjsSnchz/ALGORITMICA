@@ -404,15 +404,14 @@ CMakeFiles/practica1.exe.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  ../funcionality.hpp \
-  ../sistemaEcuaciones.hpp \
   ../ClaseTiempo.cpp \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
   /usr/include/c++/11/ctime \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../sistemaEcuaciones.hpp
 
 CMakeFiles/practica1.exe.dir/ordenacionSeleccion.cpp.o: ../ordenacionSeleccion.cpp \
   /usr/include/stdc-predef.h \
@@ -630,15 +629,15 @@ CMakeFiles/practica1.exe.dir/ordenacionSeleccion.cpp.o: ../ordenacionSeleccion.c
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  ../funcionality.hpp \
-  ../sistemaEcuaciones.hpp \
   ../ClaseTiempo.cpp \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
   /usr/include/c++/11/ctime \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../sistemaEcuaciones.hpp \
+  ../funcionality.hpp
 
 CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o: ../sistemaEcuaciones.cpp \
   /usr/include/stdc-predef.h \

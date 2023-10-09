@@ -15,7 +15,7 @@ void ficheroTiemposReales(vector <double> &tiemposReales, vector <double> &numer
     f << "Numero de elementos    Tiempos Reales" << endl;
 
 
-    for(auto i = 0; i < numeroElementos.size(); i++){
+    for(auto i = 0; i <= tiemposReales.size(); i++){
 
         f << numeroElementos[i]<<"                      " <<tiemposReales[i] << "\n";
 
@@ -32,7 +32,7 @@ void ficheroDatosFinales(vector <double> &numeroElementos, vector <double> &tiem
 
     f << "Tamaño Ejemplar    Tiempo Real     Tiempos Estimados" << endl;
 
-    for(auto i=0; i < numeroElementos.size(); i++){
+    for(auto i=0; i <= numeroElementos.size(); i++){
 
         f << numeroElementos[i] << "                      " << tiemposReales[i] << "                      " << tiemposEstimados[i] << endl;
     }
@@ -60,13 +60,12 @@ void rellenarVector(vector<int> &v){
 //
 
 bool estaOrdenado(const vector<int> &v){
-    /*for(vector<int>::iterator it=v.begin(); it != v.end(); ++it){
-        if(v[it+1]!= NULL){
-            if(v[it]>v[it+1])
-                return false;
-        }
-    }*/
-    for(size_t i=0; i <= v.size(); i++){
+    /*for(size_t i=0; i <=v.size(); i++){
+        if(v[i]>v[i+1])
+             return false;
+    }
+    */
+    for(size_t i=0; i < v.size()-1; i++){
         if(v[i]>v[i+1])
              return false;
     }
@@ -100,77 +99,13 @@ void tiemposOrdenacionSeleccion(int nMin, int nMax, int incremento, int repetici
 		            time.stop();
 	            }
                 tiempoAcumulado+=time.elapsed();
-                tiempoAcumulado=tiempoAcumulado/repeticiones;
-                cout<<"Time Elapsed: "<<time.elapsed()<<endl;
-                cout<<"Time: "<<tiempoAcumulado<<endl;
+                
             }  
-
+            tiempoAcumulado=tiempoAcumulado/repeticiones;
             tiemposReales.push_back(tiempoAcumulado);
             numeroElementos.push_back(a);  
               
     }
-    /*
-    Clock time; // Para calcular el tiempo del algoritmo, utilizaremos la clase Clock
-
-    // Creamos un vector vacio de tipo entero
-    vector <int> v;
-     // Tamano actual del vector
-    int tamActual = nMin;
-    // Variable que calcula el tiempo medio del algoritmo
-    float media = 0.0;
-
-    // para n de minimo a maximo + incremento
-    while(tamActual < nMax + incremento){
-
-        if(tamActual > nMax){
-            tamActual = nMax;
-        }
-        
-        // Ejecutamos el algoritmo durante el numero de repeticiones indicado por el usuario
-        for(unsigned int j=0; j<=repeticiones; j++){
-            
-            //Limpiamos el vector
-            v.clear();
-
-            //Reservamos el tamaño del vector
-            v.resize(tamActual);
-
-            //Rellenamos el vector
-            rellenarVector(v);
-
-            //Iniciamos el tiempo
-            time.restart();
-
-            //Ordenamos el vector
-            ordenar(v);
-
-            //Comprobamos ordenació
-
-            //Medimos el tiempo en la iteración actual
-            //Comprobamos que empezó y lo paramos
-            if(time.isStarted()){
-                time.stop();
-            }
-
-            //Actualizamos la media de tiempo de ejecución del algoritmo
-            media += time.elapsed();
-        }
-
-        //Calculamos tiempo media de todas las repeticiones de esta iteración
-        media = media/repeticiones;
-
-        //Guardamos en tiemposRealesel tiempo medio de todas las repeticiones de la iteración
-        tiemposReales.push_back(media);
-
-        cout<<tamActual<<":"<<media<<endl;
-
-        //Guardamos en numeroElementos el tamaño actual del vector
-        numeroElementos.push_back(tamActual);
-
-        //Aplicamos el incremento para actualizar el valor del tamaño del vector
-        tamActual += incremento;
-    }
-    */
 
 }
 
@@ -228,6 +163,8 @@ void ordenacionSeleccion(){
     calcularTiemposEstimadosPolinomico(nElementos, a, tiemposEstimados);
 
     ficheroDatosFinales(nElementos, tiemposReales, tiemposEstimados);
+
+    cout<<"\nCOEFICIENTE DE DETERMINACION: "<<calcularCoeficienteDeDeterminacion(tiemposReales, tiemposEstimados)<<endl;
 
     
 }
@@ -290,9 +227,9 @@ void ajusteCuadratico(const vector<double> &numeroElementos, const vector<double
 }
 
 
-long double sumatorio(const vector<double> &n,const vector <double> &t, int expN, int expT){
+double sumatorio(const vector<double> &n,const vector <double> &t, int expN, int expT){
 
-    long double sum = 0;
+    double sum = 0;
 
     for(int i=0; i<n.size(); i++){
         
@@ -302,7 +239,6 @@ long double sumatorio(const vector<double> &n,const vector <double> &t, int expN
     return sum;
 
 }
-
 
 
 void calcularTiemposEstimadosPolinomico(const vector<double> &numeroElementos, const vector<double> &a, vector<double> &tiemposEstimados){
@@ -316,53 +252,50 @@ void calcularTiemposEstimadosPolinomico(const vector<double> &numeroElementos, c
 
 
 
-long double calcularTiempoEstimadoPolinomico(const vector<double> &n, vector<double> &a){
+double calcularTEstimadoPolinomico(const double &n, vector<double> &a){
 
     double t = 0.0;
-
-    for(int i=0; i < n.size(); i++){
-        // t(n) = a0+a1*n1 +a2*n2^2
-        t += a[0] + a[1] * n[i] + a[2] * pow(n[i],2);
-    }
+        t += a[0] + a[1] * n + a[2] * pow(n,2);
     return t;
 
 }
 
 
 
-long double calcularCoeficienteDeterminacion(const vector<double> &tiemposReales, const vector<double> &tiemposEstimados){
+double calcularCoeficienteDeDeterminacion(const vector<double> &tiemposReales, const vector<double> &tiemposEstimados){
 
-    double var1 = 0;
-    double var2 = 0;
+    double vartReal = 0;
+    double vartEstimados = 0;
 
-    var1 = calcularVarianza(tiemposReales);
-    var2 = calcularVarianza(tiemposEstimados);
+    vartReal = calcularV(tiemposReales);
+    vartEstimados = calcularV(tiemposEstimados);
 
     double coeficienteDeterminacion = 0;
 
-    coeficienteDeterminacion = var2/var1;
+    coeficienteDeterminacion = vartEstimados/vartReal;
 
     return coeficienteDeterminacion;
 
 }
 
-long double calcularVarianza(const vector<double> &v){
 
-    double mean = 0;
-    mean = calcularMedia(v);
+double calcularV(const vector<double> &v){
+
+    double med = 0;
+    med = calcularM(v);
 
     double aux = 0;
     double cont = v.size();
     //Calcular varianza
     for(int i=0; i<cont; i++){
-        aux += pow((v[i] - mean), 2);
+        aux += pow((v[i] - med), 2);
     }
 
     return (aux/cont);
 }
 
 
-long double calcularMedia(const vector <double> &v){
+double calcularM(const vector <double> &v){
     
     double aux = 0;
     double cont = v.size();
