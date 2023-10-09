@@ -5,6 +5,35 @@ using namespace std;
 
 
 //
+//FICHEROS
+//
+
+void ficheroTiemposReales(vector <double> &tiemposReales, vector <double> &numeroElementos){
+
+    ofstream f("tiemposReales.txt");
+
+    f.open("tiemposReales.txt");
+
+    for(auto i = 0; i < numeroElementos.size(); i++){
+
+        f<<numeroElementos[i];
+        f<<"; ";
+        f<<tiemposReales[i];
+        f<<"/n";
+
+    }
+
+    f.close();
+}
+
+
+
+void ficheroDatosFinales(int size, vector <double> &tiemposReales, vector <double> &tiemposEstimados){
+
+    ofstream f("datosFinales.txt");
+
+}
+//
 //RELLENAR VECTOR
 //
 void rellenarVector(vector<int> &v){
@@ -52,12 +81,16 @@ for(int a=nMin;a<=nMax;a=a+incremento){
 	        {
 		        time.stop();
                 tiempoAcumulado+=time.elapsed();
+                cout<<"Time: "<<tiempoAcumulado<<endl;
                 
 	        }
         }  
         tiemposReales.push_back(tiempoAcumulado/repeticiones);
         numeroElementos.push_back(a);        
-    }
+}
+
+ficheroTiemposReales(numeroElementos,tiemposReales); 
+
 
 }
 
@@ -85,7 +118,9 @@ void ordenacionSeleccion(){
     //Clock time;
     int nMin, nMax, incremento, repeticiones;
     vector <double> tiemposReales;
+    vector <double> tiemposEstimados;
     vector <double> nElementos;
+    vector <double> a(2);
 
     cout<<"Introduzca el valor mínimo del número de elementos del vector"<<endl;
     cin>>nMin;

@@ -21,7 +21,8 @@ int main(){
 
     switch(opt){
         case 1:
-            //ordenacionSeleccion();
+        
+            ordenacionSeleccion();
             
         case 2:
 
