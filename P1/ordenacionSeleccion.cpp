@@ -142,7 +142,7 @@ void ordenacionSeleccion(){
     vector <double> tiemposReales;
     vector <double> tiemposEstimados;
     vector <double> nElementos;
-    vector <double> a(2);
+    vector <double> a(3);
 
     cout<<"Introduzca el valor mínimo del número de elementos del vector"<<endl;
     cin>>nMin;

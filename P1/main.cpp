@@ -26,13 +26,17 @@ int main(){
         case 1:
         
             ordenacionSeleccion();
-            
+            break;
         case 2:
             matrizCuadrada();
+            break;
         case 3:
-
+            break;
         case 0:
             salir=true;
+            break;
+        default:
+            break;
     };
     }
 }

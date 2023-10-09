@@ -1,5 +1,4 @@
 Numero de elementos    Tiempos Reales
-1                      13
-2                      23
-3                      35
+1                      20
+3                      30
 0                      0

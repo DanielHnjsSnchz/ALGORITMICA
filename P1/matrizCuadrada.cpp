@@ -127,7 +127,7 @@ void matrizCuadrada(){
     vector <double> tiemposReales;
     vector <double> tiemposEstimados;
     vector <double> nElementos;
-    vector <double> a(3);
+    vector <double> a(4);
 
     cout << "Ingrese el orden de la matriz minimo: ";
     cin >> nMin;
