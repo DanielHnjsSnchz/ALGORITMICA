@@ -177,10 +177,10 @@ CMakeFiles/practica1.exe.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/i02hisad/Desktop/P1/ClaseTiempo.cpp \
  /home/i02hisad/Desktop/P1/ClaseTiempo.hpp /usr/include/c++/11/cassert \
  /usr/include/assert.h /usr/include/c++/11/ctime \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /home/i02hisad/Desktop/P1/sistemaEcuaciones.hpp \
  /home/i02hisad/Desktop/P1/misc.hpp \
- /home/i02hisad/Desktop/P1/matrizCuadrada.hpp
+ /home/i02hisad/Desktop/P1/matrizCuadrada.hpp \
+ /home/i02hisad/Desktop/P1/ClaseTiempo.cpp

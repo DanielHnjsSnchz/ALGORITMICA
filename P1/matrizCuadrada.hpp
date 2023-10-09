@@ -6,7 +6,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <fstream>
-#include "ClaseTiempo.cpp"
+#include "ClaseTiempo.hpp"
 #include "sistemaEcuaciones.hpp"
 #include "misc.hpp"
 

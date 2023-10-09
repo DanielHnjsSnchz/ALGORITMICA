@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ordenacionSeleccion.hpp"
 #include "matrizCuadrada.hpp"
+//#include "fibonacci.hpp"
 
 #include "ClaseTiempo.cpp"
 
@@ -31,6 +32,7 @@ int main(){
             matrizCuadrada();
             break;
         case 3:
+        //fibonacci();
             break;
         case 0:
             salir=true;
