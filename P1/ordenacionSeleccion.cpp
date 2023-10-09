@@ -254,7 +254,7 @@ void calcularTiemposEstimadosPolinomico(const vector<double> &numeroElementos, c
 double calcularTEstimadoPolinomico(const double &n, vector<double> &a){
 
     double t = 0.0;
-        t += a[0] + a[1] * n + a[2] * pow(n,2);
+        t = a[0] + a[1] * n + a[2] * pow(n,2);
     return t;
 
 }
