@@ -10,16 +10,16 @@ int fibonacci(int &n){
     }
 }
 
-void tiemposFibonacci(int &nMin, int &nMax,int &repeticiones,vector <double> &tiemposReales, vector <double> &numeroElementos ){
+void tiemposFibonacci(int &nMin, int &nMax,int &incremento,vector <double> &tiemposReales, vector <double> &numeroElementos ){
 
     Clock time;
     long double tiempoAcumulado=0;
     vector <int> v(nMax-nMin);
 
-    for(unsigned int a=nMin;a<=nMax;a+incremento){
+    for(int a=nMin;a<=nMax;a+incremento){
             time.restart();
 
-            int resultado = fibonacci(int &a);
+            int resultado = fibonacci(a);
             cout<<resultado<<endl;
             if (time.isStarted())
 	        {
@@ -27,7 +27,7 @@ void tiemposFibonacci(int &nMin, int &nMax,int &repeticiones,vector <double> &ti
                 tiempoAcumulado+=time.elapsed();
                 
 	        } 
-        tiemposReales.push_back(tiempoAcumulado/repeticiones);
+        tiemposReales.push_back(tiempoAcumulado);
         numeroElementos.push_back(a);        
     }
 
@@ -36,7 +36,7 @@ void tiemposFibonacci(int &nMin, int &nMax,int &repeticiones,vector <double> &ti
 void fibonacci(){
 
     Clock time;
-    int nMin, nMax; 
+    int nMin, nMax, incremento; 
     vector <double> tiemposReales;
     vector <double> nElementos;   
 

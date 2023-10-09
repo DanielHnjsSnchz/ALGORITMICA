@@ -17,7 +17,7 @@ int fibonacci(int &n);
 void ajusteExponencial(const vector <double> &n, const vector <double> &tiemposReales, vector <double> &a);
 void calcularTiemposEstimadosExponencial(const vector <double> &n, const vector <double> &tiempoReales,const vector <double> &a, vector <double> &  tiemposEstimados);
 double calcularTiempoEstimadoExponencial(const double &n, const vector <double> &a); 
-void tiemposFibonacci(int &nMin, int &nMax,int &incremento,vector <double> &tiemposReales, vector <double> &numeroElementos)
+void tiemposFibonacci(int &nMin, int &nMax,int &incremento,vector <double> &tiemposReales, vector <double> &numeroElementos);
 
 
 

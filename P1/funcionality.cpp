@@ -45,9 +45,9 @@ void crearMatrizB(const vector<double> &numeroElementos,const vector<double> &ti
 
 void ajusteCuadratico(const vector<double> &numeroElementos, const vector<double> &tiemposReales, vector<double> &a){
 
-    vector < vector<double> > matrizA (3,vector <double>(3));
-    vector < vector<double> > matrizB (3,vector <double>(1));
-    vector < vector<double> > matrizR (3,vector <double>(1));
+    vector <vector<double>> matrizA (3,vector <double>(3));
+    vector <vector<double>> matrizB (3,vector <double>(1));
+    vector <vector<double>> matrizR (3,vector <double>(1));
 
     crearMatrizA(numeroElementos, tiemposReales, matrizA);
     crearMatrizB(numeroElementos, tiemposReales, matrizB);
@@ -93,7 +93,7 @@ void calcularTiemposEstimadosPolinomico(const vector<double> &numeroElementos, c
 }
 
 
-long double calcularTiempoEstimadoPolinomico(const double &n, vector<double> &a){
+long double calcularTiempoEstimadoPolinomico(const vector<double> &n, vector<double> &a){
 
     double t = 0.0;
 
@@ -126,13 +126,13 @@ long double calcularCoeficienteDeterminacion(const vector<double> &tiemposReales
 long double calcularVarianza(const vector<double> &v){
 
     double mean = 0;
-    mean = calcularMedia(x);
+    mean = calcularMedia(v);
 
     double aux = 0;
     double cont = v.size();
     //Calcular varianza
     for(int i=0; i<cont; i++){
-        aux += pow((x[i] - mean), 2);
+        aux += pow((v[i] - mean), 2);
     }
 
     return (aux/cont);
