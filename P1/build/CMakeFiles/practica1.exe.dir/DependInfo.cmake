@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/i02hisad/Desktop/P1/ClaseTiempo.cpp" "CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o" "gcc" "CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o.d"
   "/home/i02hisad/Desktop/P1/main.cpp" "CMakeFiles/practica1.exe.dir/main.cpp.o" "gcc" "CMakeFiles/practica1.exe.dir/main.cpp.o.d"
   "/home/i02hisad/Desktop/P1/matrizCuadrada.cpp" "CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.o" "gcc" "CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.o.d"
+  "/home/i02hisad/Desktop/P1/misc.cpp" "CMakeFiles/practica1.exe.dir/misc.cpp.o" "gcc" "CMakeFiles/practica1.exe.dir/misc.cpp.o.d"
   "/home/i02hisad/Desktop/P1/ordenacionSeleccion.cpp" "CMakeFiles/practica1.exe.dir/ordenacionSeleccion.cpp.o" "gcc" "CMakeFiles/practica1.exe.dir/ordenacionSeleccion.cpp.o.d"
   "/home/i02hisad/Desktop/P1/sistemaEcuaciones.cpp" "CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o" "gcc" "CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o.d"
   )

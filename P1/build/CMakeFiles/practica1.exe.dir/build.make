@@ -111,10 +111,24 @@ CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/i02hisad/Desktop/P1/matrizCuadrada.cpp -o CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.s
 
+CMakeFiles/practica1.exe.dir/misc.cpp.o: CMakeFiles/practica1.exe.dir/flags.make
+CMakeFiles/practica1.exe.dir/misc.cpp.o: ../misc.cpp
+CMakeFiles/practica1.exe.dir/misc.cpp.o: CMakeFiles/practica1.exe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/i02hisad/Desktop/P1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/practica1.exe.dir/misc.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/practica1.exe.dir/misc.cpp.o -MF CMakeFiles/practica1.exe.dir/misc.cpp.o.d -o CMakeFiles/practica1.exe.dir/misc.cpp.o -c /home/i02hisad/Desktop/P1/misc.cpp
+
+CMakeFiles/practica1.exe.dir/misc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/practica1.exe.dir/misc.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/i02hisad/Desktop/P1/misc.cpp > CMakeFiles/practica1.exe.dir/misc.cpp.i
+
+CMakeFiles/practica1.exe.dir/misc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/practica1.exe.dir/misc.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/i02hisad/Desktop/P1/misc.cpp -o CMakeFiles/practica1.exe.dir/misc.cpp.s
+
 CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o: CMakeFiles/practica1.exe.dir/flags.make
 CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o: ../ClaseTiempo.cpp
 CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o: CMakeFiles/practica1.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/i02hisad/Desktop/P1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/i02hisad/Desktop/P1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o -MF CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o.d -o CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o -c /home/i02hisad/Desktop/P1/ClaseTiempo.cpp
 
 CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.s: cmake_force
 CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o: CMakeFiles/practica1.exe.dir/flags.make
 CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o: ../sistemaEcuaciones.cpp
 CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o: CMakeFiles/practica1.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/i02hisad/Desktop/P1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/i02hisad/Desktop/P1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o -MF CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o.d -o CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o -c /home/i02hisad/Desktop/P1/sistemaEcuaciones.cpp
 
 CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.i: cmake_force
@@ -144,6 +158,7 @@ practica1_exe_OBJECTS = \
 "CMakeFiles/practica1.exe.dir/main.cpp.o" \
 "CMakeFiles/practica1.exe.dir/ordenacionSeleccion.cpp.o" \
 "CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.o" \
+"CMakeFiles/practica1.exe.dir/misc.cpp.o" \
 "CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o" \
 "CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o"
 
@@ -153,11 +168,12 @@ practica1_exe_EXTERNAL_OBJECTS =
 practica1.exe: CMakeFiles/practica1.exe.dir/main.cpp.o
 practica1.exe: CMakeFiles/practica1.exe.dir/ordenacionSeleccion.cpp.o
 practica1.exe: CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.o
+practica1.exe: CMakeFiles/practica1.exe.dir/misc.cpp.o
 practica1.exe: CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o
 practica1.exe: CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o
 practica1.exe: CMakeFiles/practica1.exe.dir/build.make
 practica1.exe: CMakeFiles/practica1.exe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/i02hisad/Desktop/P1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable practica1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/i02hisad/Desktop/P1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable practica1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/practica1.exe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

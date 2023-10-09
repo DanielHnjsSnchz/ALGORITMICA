@@ -201,6 +201,30 @@ matrizCuadrada.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica1.exe.dir/build.make CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.s
 .PHONY : matrizCuadrada.cpp.s
 
+misc.o: misc.cpp.o
+.PHONY : misc.o
+
+# target to build an object file
+misc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica1.exe.dir/build.make CMakeFiles/practica1.exe.dir/misc.cpp.o
+.PHONY : misc.cpp.o
+
+misc.i: misc.cpp.i
+.PHONY : misc.i
+
+# target to preprocess a source file
+misc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica1.exe.dir/build.make CMakeFiles/practica1.exe.dir/misc.cpp.i
+.PHONY : misc.cpp.i
+
+misc.s: misc.cpp.s
+.PHONY : misc.s
+
+# target to generate assembly for a file
+misc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica1.exe.dir/build.make CMakeFiles/practica1.exe.dir/misc.cpp.s
+.PHONY : misc.cpp.s
+
 ordenacionSeleccion.o: ordenacionSeleccion.cpp.o
 .PHONY : ordenacionSeleccion.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... matrizCuadrada.o"
 	@echo "... matrizCuadrada.i"
 	@echo "... matrizCuadrada.s"
+	@echo "... misc.o"
+	@echo "... misc.i"
+	@echo "... misc.s"
 	@echo "... ordenacionSeleccion.o"
 	@echo "... ordenacionSeleccion.i"
 	@echo "... ordenacionSeleccion.s"

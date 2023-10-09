@@ -1,6 +1,6 @@
 CMakeFiles/practica1.exe.dir/ClaseTiempo.cpp.o: \
  /home/i02hisad/Desktop/P1/ClaseTiempo.cpp /usr/include/stdc-predef.h \
- /usr/include/c++/11/cassert \
+ /home/i02hisad/Desktop/P1/ClaseTiempo.hpp /usr/include/c++/11/cassert \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

@@ -9,7 +9,7 @@ using namespace std;
 
 void ficheroTiemposReales(vector <double> &tiemposReales, vector <double> &numeroElementos){
 
-    ofstream f("tiemposReales.txt");
+    ofstream f("tiemposRealesSeleccion.txt");
 
     f << "Numero de elementos    Tiempos Reales" << endl;
 
@@ -27,7 +27,7 @@ void ficheroTiemposReales(vector <double> &tiemposReales, vector <double> &numer
 
 void ficheroDatosFinales(vector <double> &numeroElementos, vector <double> &tiemposReales, vector <double> &tiemposEstimados){
 
-    ofstream f("datosFinales.txt");
+    ofstream f("datosFinalesSeleccion.txt");
 
     f << "Tamaño Ejemplar    Tiempo Real     Tiempos Estimados" << endl;
 
@@ -173,7 +173,7 @@ void ordenacionSeleccion(){
 
      while(n != 0){
         cout << endl;
-        cout << "1.- Introduzca el valor que quiera estimar" << endl;
+        cout << "Introduzca el valor que quiera estimar" << endl;
         cout << "0.- Salir" << endl;
         cin >> n;
         if (n != 0){

@@ -14,22 +14,22 @@ void matrizCuadrada();
 void matrizCuadrada(vector <vector<double>> &matrizA,vector <vector<double>> &matrizR);
 void rellenarMatriz(vector <vector<double>> &m);
 void tiemposCuadrado(int nMin, int nMax, int incremento, vector <double> &tiemposReales, vector <double> &numeroElementos);
-void ficheroTiemposReales(vector <double> &tiemposReales, vector <double> &numeroElementos);
-void ficheroDatosFinales(vector <double> &numeroElementos, vector <double> &tiemposReales, vector <double> &tiemposEstimados);
+void ficheroTiemposRealesMatriz(vector <double> &tiemposReales, vector <double> &numeroElementos);
+void ficheroDatosFinalesMatriz(vector <double> &numeroElementos, vector <double> &tiemposReales, vector <double> &tiemposEstimados);
 
 //
 //AJUSTES Y ESTIMACIONES
 //
 
-void crearMatrizA(const vector<double> &numeroElementos,const vector<double> &tiemposReales,vector <vector<double>> &matrizA);
-void crearMatrizB(const vector<double> &numeroElementos,const vector<double> &tiemposReales,vector <vector<double>> &matrizB);
+void crearMatrizA2(const vector<double> &numeroElementos,const vector<double> &tiemposReales,vector <vector<double>> &matrizA);
+void crearMatrizB2(const vector<double> &numeroElementos,const vector<double> &tiemposReales,vector <vector<double>> &matrizB);
 void ajusteCubico(const vector<double> &numeroElementos, const vector<double> &tiemposReales, vector<double> &a);
-double sum(const vector<double> &n,const vector <double> &t, int expN, int expT);
-void calcularTiemposEstimadosPolinomico(const vector<double> &numeroElementos, const vector<double> &a, vector<double> &tiemposEstimados);
-double calcularTEstimadoPolinomico(const double &n, vector<double> &a);
+double sum2(const vector<double> &n,const vector <double> &t, int expN, int expT);
+void calcularTiemposEstimadosPolinomico2(const vector<double> &numeroElementos, const vector<double> &a, vector<double> &tiemposEstimados);
+double calcularTEstimadoPolinomico2(const double &n, vector<double> &a);
 
-double calcularCoeficienteDeDeterminacion(const vector<double> &tiemposReales, const vector<double> &tiemposEstimados);
-double calcularV(const vector <double> &v);
-double calcularM(const vector <double> &v);
+double calcularCoeficienteDeDeterminacion2(const vector<double> &tiemposReales, const vector<double> &tiemposEstimados);
+double calcularV2(const vector <double> &v);
+double calcularM2(const vector <double> &v);
 
 #endif
