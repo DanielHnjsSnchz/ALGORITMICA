@@ -636,8 +636,7 @@ CMakeFiles/practica1.exe.dir/ordenacionSeleccion.cpp.o: ../ordenacionSeleccion.c
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  ../sistemaEcuaciones.hpp \
-  ../funcionality.hpp
+  ../sistemaEcuaciones.hpp
 
 CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o: ../sistemaEcuaciones.cpp \
   /usr/include/stdc-predef.h \
@@ -851,8 +850,6 @@ CMakeFiles/practica1.exe.dir/sistemaEcuaciones.cpp.o: ../sistemaEcuaciones.cpp \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc
 
-
-../funcionality.hpp:
 
 /usr/include/c++/11/bits/fstream.tcc:
 

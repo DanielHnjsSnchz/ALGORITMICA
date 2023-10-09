@@ -8,6 +8,7 @@
 #include <fstream>
 #include "ClaseTiempo.cpp"
 #include "sistemaEcuaciones.hpp"
+#include "misc.hpp"
 
 
 //#include "ordenacionSeleccion.cpp"

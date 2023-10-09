@@ -163,7 +163,24 @@ void ordenacionSeleccion(){
 
     ficheroDatosFinales(nElementos, tiemposReales, tiemposEstimados);
 
-    cout<<"\nCOEFICIENTE DE DETERMINACION: "<<calcularCoeficienteDeDeterminacion(tiemposReales, tiemposEstimados)<<endl;
+    double sigma = calcularCoeficienteDeDeterminacion(tiemposReales, tiemposEstimados);
+
+    cout << endl;
+    cout << "El coeficiente de determinación es de " << sigma << endl;
+    cout << "f(n) = " << a[0] << " + " << a[1] << " * n + "<< a[2] << " * n2" << endl;
+
+    double n;
+
+     while(n != 0){
+        cout << endl;
+        cout << "1.- Introduzca el valor que quiera estimar" << endl;
+        cout << "0.- Salir" << endl;
+        cin >> n;
+        if (n != 0){
+            double microseg = calcularTEstimadoPolinomico(n, a);
+            conversionTiempo(microseg);
+        }
+    }
 
     
 }

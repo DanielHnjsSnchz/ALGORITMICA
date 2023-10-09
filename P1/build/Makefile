@@ -177,6 +177,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica1.exe.dir/build.make CMakeFiles/practica1.exe.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+matrizCuadrada.o: matrizCuadrada.cpp.o
+.PHONY : matrizCuadrada.o
+
+# target to build an object file
+matrizCuadrada.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica1.exe.dir/build.make CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.o
+.PHONY : matrizCuadrada.cpp.o
+
+matrizCuadrada.i: matrizCuadrada.cpp.i
+.PHONY : matrizCuadrada.i
+
+# target to preprocess a source file
+matrizCuadrada.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica1.exe.dir/build.make CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.i
+.PHONY : matrizCuadrada.cpp.i
+
+matrizCuadrada.s: matrizCuadrada.cpp.s
+.PHONY : matrizCuadrada.s
+
+# target to generate assembly for a file
+matrizCuadrada.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica1.exe.dir/build.make CMakeFiles/practica1.exe.dir/matrizCuadrada.cpp.s
+.PHONY : matrizCuadrada.cpp.s
+
 ordenacionSeleccion.o: ordenacionSeleccion.cpp.o
 .PHONY : ordenacionSeleccion.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... matrizCuadrada.o"
+	@echo "... matrizCuadrada.i"
+	@echo "... matrizCuadrada.s"
 	@echo "... ordenacionSeleccion.o"
 	@echo "... ordenacionSeleccion.i"
 	@echo "... ordenacionSeleccion.s"
