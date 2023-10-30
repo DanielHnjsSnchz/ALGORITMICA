@@ -1,0 +1,3 @@
+/home/i02hisad/Desktop/23-24/ALGORITMICA/P2/HinojosaSanchez/build/CMakeFiles/practica2.exe.dir
+/home/i02hisad/Desktop/23-24/ALGORITMICA/P2/HinojosaSanchez/build/CMakeFiles/edit_cache.dir
+/home/i02hisad/Desktop/23-24/ALGORITMICA/P2/HinojosaSanchez/build/CMakeFiles/rebuild_cache.dir
