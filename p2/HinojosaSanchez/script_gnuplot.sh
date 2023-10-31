@@ -17,5 +17,5 @@ gnuplot <<-EOF
     plot '$data_file' using 1:2 with lines title "Quicksort Hoare", '$data_file' using 1:3 t "Quicksort Mediana" w l
 EOF
 
-# Mostrar la gráfica usando un visor de imágenes (por ejemplo, en Linux)
+# Mostrar la gráfica usando un visor de imágenes
 xdg-open grafico.eps
