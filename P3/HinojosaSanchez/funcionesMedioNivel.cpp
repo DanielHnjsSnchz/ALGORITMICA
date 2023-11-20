@@ -8,18 +8,27 @@ void cambio(int cantidad, vector<Moneda> &sistemaMonetario, vector<int> &solucio
     int sumaParcial = 0;
     size_t i = 0;
 
-    while (sumaParcial != cantidad && i < sistemaMonetario.size()) {
+    while(sumaParcial != cantidad && i < sistemaMonetario.size()){
+
         int x = sistemaMonetario[i].getValor();
-        if (sumaParcial + x <= cantidad) {
+
+        if(sumaParcial + x <= cantidad){
+
             solucion[i]++;
             sumaParcial += x;
-        } else {
+
+        }else{
+
             i++;
+
         }
+
     }
 
-    if (sumaParcial != cantidad) {
+    if(sumaParcial != cantidad){
+
         cout << "No se encontró solución.\n";
+
     }
 }
 
