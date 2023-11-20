@@ -47,16 +47,16 @@ void escribirSolucion(vector<int> &solucion, vector<Moneda> &sistemaMonetario) {
 void escribirSolucion(vector<MaterialUsado> &solucion) {
 
     float precioTotal=0;
-    cout << "\nSolución del problema de la mochila:\n";
+    cout << "\nSolución del problema de la mochila: \n";
 
-    for (const auto &materialUsado : solucion) {
-        
-        Material material = materialUsado.getMaterial();
-        cout << "\tMaterial " << material.getEtiqueta() << ": Volumen usado = " << materialUsado.getVolumenUsado()
+    for (size_t i = 0; i < solucion.size(); ++i) {
+
+        Material material = solucion[i].getMaterial();
+        cout << "\tMaterial " << material.getEtiqueta() << ": Volumen usado = " << solucion[i].getVolumenUsado()
              << ", Precio por unidad de volumen = " << material.getPrecio() << endl;
         
-        precioTotal+=(material.getPrecio()*materialUsado.getVolumenUsado());
-    
+        precioTotal+=(material.getPrecio()*solucion[i].getVolumenUsado());
+
     }
 
     cout<<"\nPrecio total: "<<precioTotal<<endl;

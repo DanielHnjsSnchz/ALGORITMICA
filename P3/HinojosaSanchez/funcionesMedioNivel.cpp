@@ -68,12 +68,12 @@ void mochila(float volumenMochila, vector<Material> &materiales, vector<Material
         // Comprobar si el material de mayor precio cabe en la mochila
         if(materialDisponible){
             if(resto >= materiales[materialMaximo].getVolumen()){
-                //solucion[materialMaximo].setVolumenUsado(materiales[materialMaximo].getVolumen());
-                solucion.push_back(MaterialUsado(materiales[materialMaximo], materiales[materialMaximo].getVolumen()));
+                solucion[materialMaximo].setVolumenUsado(materiales[materialMaximo].getVolumen());
+                //solucion.push_back(MaterialUsado(materiales[materialMaximo], materiales[materialMaximo].getVolumen()));
                 resto -= materiales[materialMaximo].getVolumen();
             }else{
-                //solucion[materialMaximo].setVolumenUsado(resto);
-                solucion.push_back(MaterialUsado(materiales[materialMaximo], resto));
+                solucion[materialMaximo].setVolumenUsado(resto);
+                //solucion.push_back(MaterialUsado(materiales[materialMaximo], resto));
                 resto = 0;
             }
         }
