@@ -41,17 +41,18 @@ void mochila(float volumenMochila, vector<Material> &materiales, vector<Material
     float resto = volumenMochila;
     bool materialDisponible = false;
 
-    // Marcar todos los materiales como no usados
-    for(int i = 0; i < n; ++i){
-        solucion[i].setVolumenUsado(0);
-    }
+    /*Esto ya lo hago en el main
+    for(int i = 0; i<materiales.size(); i++){
+        solucion.push_back(MaterialUsado(materiales[i],0));
+    }*/
 
     // Seleccionar materiales mientras la mochila no esté llena
     do {
-        float precioMaximo = 0;
-        int materialMaximo = -1;
         
-
+        float precioMaximo = 0;
+        int materialMaximo = 0;
+        materialDisponible = false;
+    
         // Seleccionar el material de mayor precio por unidad de volumen
         for(int i = 0; i < n; ++i){
             if(solucion[i].getVolumenUsado() == 0){
@@ -59,6 +60,7 @@ void mochila(float volumenMochila, vector<Material> &materiales, vector<Material
                 if(materiales[i].getPrecio() > precioMaximo){
                     precioMaximo = materiales[i].getPrecio();
                     materialMaximo = i;
+
                 }
             }
         }
