@@ -12,7 +12,7 @@
 
 using namespace std;
 
-void cambio(int cantidad, vector<Moneda> sistemaMonetario, vector<int> &solucion);
+void cambio(int cantidad, vector<Moneda> &sistemaMonetario, vector<int> &solucion);
 void mochila(float volumenMochila, vector<Material> &materiales, vector<MaterialUsado> &solucion);
 
 
