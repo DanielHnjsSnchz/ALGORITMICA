@@ -1,0 +1,3 @@
+/home/i02hisad/Desktop/23-24/ALGORITMICA/P4/HinojosaSanchez/CMakeFiles/practica4.exe.dir
+/home/i02hisad/Desktop/23-24/ALGORITMICA/P4/HinojosaSanchez/CMakeFiles/edit_cache.dir
+/home/i02hisad/Desktop/23-24/ALGORITMICA/P4/HinojosaSanchez/CMakeFiles/rebuild_cache.dir
