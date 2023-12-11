@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/practica5.exe.dir/main.cpp.o CMakeFiles/practica5.exe.dir/funcionesMedioNivel.cpp.o CMakeFiles/practica5.exe.dir/funcionesBacktracking.cpp.o CMakeFiles/practica5.exe.dir/funcionesVegas.cpp.o -o practica5.exe 

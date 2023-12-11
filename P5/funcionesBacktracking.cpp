@@ -2,10 +2,13 @@
 #include <vector>
 #include <cstdlib>
 #include "ClaseTiempo.cpp"
+#include "contadorIntentos.h"
 
 using namespace std;
 
-bool esSeguro(vector<int>& solucion, int fila, int columna) {
+int intentos_globales = 0; // Variable global para contar intentos
+
+bool esSeguro(const vector<int>& solucion, int fila, int columna) {
     for (int i = 0; i < fila; ++i) {
         if (solucion[i] == columna || abs(solucion[i] - columna) == abs(i - fila)) {
             return false;
@@ -14,93 +17,136 @@ bool esSeguro(vector<int>& solucion, int fila, int columna) {
     return true;
 }
 
-void resolverNReinasBacktracking(int fila, int n, vector<int>& solucion, vector<vector<int>>& soluciones, int& intentos) {
-    if (fila == n) {
-        soluciones.push_back(solucion);
-        ++intentos;
-        return;
-    }
-
-    for (int columna = 0; columna < n; ++columna) {
-        if (esSeguro(solucion, fila, columna)) {
-            solucion[fila] = columna;
-            resolverNReinasBacktracking(fila + 1, n, solucion, soluciones, intentos);
-        }
-    }
-}
-
-void nReinasBacktracking(int n) {
-    vector<int> solucion(n, -1);
-    vector<vector<int>> soluciones;
-    Clock reloj;
-    reloj.start();
-
-    int intentos = 0;
-    resolverNReinasBacktracking(0, n, solucion, soluciones, intentos);
-
-    reloj.stop();
-
-    // Mostrar todas las soluciones encontradas
-    cout << "Todas las soluciones del problema para n=" << n << ":\n";
+void escribirSoluciones(const vector<vector<int>> &soluciones) {
+    cout << "Todas las soluciones:\n";
     for (const auto& solucion : soluciones) {
         for (int col : solucion) {
             cout << col << " ";
         }
         cout << "\n";
     }
-
-    // Mostrar el número de intentos y el tiempo transcurrido
-    cout << "Número total de soluciones encontradas: " << soluciones.size() << "\n";
-    cout << "Número de intentos: " << intentos << "\n";
-    cout << "Tiempo transcurrido: " << reloj.elapsed() << " microsegundos\n";
 }
 
-void resolverNReinasBacktrackingUnica(int fila, int n, vector<int>& solucion, int& intentos) {
+void escribirSolucion(const vector<int> &solucion) {
+    cout << "La primera solución:\n";
+    for (int col : solucion) {
+        cout << col << " ";
+    }
+    cout << "\n";
+}
+
+
+void nReinasBacktracking(int n, vector<vector<int>>& soluciones) {
+    int fila = soluciones.size(); // Utilizamos el tamaño actual del vector soluciones como fila
     if (fila == n) {
-        ++intentos;
+        vector<int> solucion(soluciones.size());
+        for (int i = 0; i < soluciones.size(); ++i) {
+            if (soluciones[i].size() > fila) {
+                solucion[i] = soluciones[i][fila];
+            }
+        }
+        soluciones.push_back(solucion);
+        ++intentos_globales;
         return;
     }
 
     for (int columna = 0; columna < n; ++columna) {
-        if (esSeguro(solucion, fila, columna)) {
-            solucion[fila] = columna;
-            resolverNReinasBacktrackingUnica(fila + 1, n, solucion, intentos);
-            if (intentos > 0) {
+        if (esSeguro(soluciones[fila], fila, columna)) {
+            soluciones[fila].push_back(columna);
+            nReinasBacktracking(n, soluciones);
+            soluciones[fila].pop_back();
+        }
+    }
+}
+
+void nReinasBacktracking(int n, vector<int>& solucion) {
+    if (n == solucion.size()) {
+        ++intentos_globales;
+        return;
+    }
+
+    for (int columna = 0; columna < n; ++columna) {
+        if (esSeguro(solucion, n, columna)) {
+            solucion[n] = columna;
+            nReinasBacktracking(n + 1, solucion);
+            if (intentos_globales > 0) {
+                return;
+            }
+        }
+    }
+}
+/*void resolverNReinasBacktracking(int n, vector<vector<int>>& soluciones) {
+    if (n == soluciones.size()) {
+        soluciones.push_back(solucion);
+        return;
+    }
+
+    for (int columna = 0; columna < n; ++columna) {
+        if (esSeguro(solucion, n, columna)) {
+            solucion[n] = columna;
+            resolverNReinasBacktracking(n + 1, soluciones);
+        }
+    }
+}*/
+
+void nReinasBacktracking(int n, vector<vector<int>>& soluciones) {
+    vector<int> solucion(n, -1);
+    Clock reloj;
+    reloj.start();
+
+    resolverNReinasBacktracking(0, solucion, soluciones);
+
+    reloj.stop();
+
+    // Llama a la función para escribir todas las soluciones
+    escribirSoluciones(soluciones);
+
+    // Mostrar el número de intentos y el tiempo transcurrido
+    cout << "Número total de soluciones encontradas: " << soluciones.size() << "\n";
+    cout << "Tiempo transcurrido: " << reloj.elapsed() << " microsegundos\n";
+}
+
+void escribirSolucion(const vector<int> &solucion) {
+    cout << "La primera solución:\n";
+    for (int col : solucion) {
+        cout << col << " ";
+    }
+    cout << "\n";
+}
+
+void nReinasBacktracking(int n, vector<int>& solucion) {
+    if (n == solucion.size()) {
+        ++intentos_globales;
+        return;
+    }
+
+    for (int columna = 0; columna < n; ++columna) {
+        if (esSeguro(solucion, n, columna)) {
+            solucion[n] = columna;
+            nReinasBacktracking(n + 1, solucion);
+            if (intentos_globales > 0) {
                 return;
             }
         }
     }
 }
 
-void nReinasBacktrackingUnica(int n) {
-    vector<int> solucion(n, -1);
+
+/*
+void nReinasBacktracking(int n, vector<int>& solucion) {
     Clock reloj;
     reloj.start();
 
-    int intentos = 0;
-    resolverNReinasBacktrackingUnica(0, n, solucion, intentos);
+    resolverNReinasBacktrackingUnica(0, solucion);
 
     reloj.stop();
 
-    // Mostrar la primera solución encontrada
-    cout << "La primera solución encontrada para n=" << n << ":\n";
-    for (int col : solucion) {
-        cout << col << " ";
-    }
-    cout << "\n";
+    // Llama a la función para escribir la primera solución
+    escribirSolucion(solucion);
 
     // Mostrar el número de intentos y el tiempo transcurrido
-    cout << "Número de intentos: " << intentos << "\n";
+    cout << "Número de intentos: " << intentos_globales << "\n";
     cout << "Tiempo transcurrido: " << reloj.elapsed() << " microsegundos\n";
 }
+*/
 
-int main() {
-    int n;
-    cout << "Introduce el valor de n: ";
-    cin >> n;
-
-    nReinasBacktracking(n);
-    nReinasBacktrackingUnica(n);
-
-    return 0;
-}
