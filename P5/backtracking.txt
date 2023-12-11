@@ -1,0 +1,54 @@
+bool esSeguro(vector<int>& solucion, int fila, int columna) {
+    // Implementa la lógica según las reglas del problema de las n reinas
+    for (int i = 0; i < fila; ++i) {
+        if (solucion[i] == columna || abs(i - fila) == abs(solucion[i] - columna)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void resolverNReinas(int fila, int n, vector<int>& solucion, vector<vector<int>>& soluciones) {
+    if (fila == n) {
+        soluciones.push_back(solucion);
+        return;
+    }
+
+    for (int columna = 0; columna < n; ++columna) {
+        if (esSeguro(solucion, fila, columna)) {
+            solucion[fila] = columna;
+            resolverNReinas(fila + 1, n, solucion, soluciones);
+        }
+    }
+}
+
+void nReinasBacktracking(int n, vector<vector<int>>& soluciones) {
+    vector<int> solucion(n, -1);
+    resolverNReinas(0, n, solucion, soluciones);
+}
+
+void escribirSoluciones(vector<vector<int>>& soluciones) {
+    for (const auto& solucion : soluciones) {
+        for (int col : solucion) {
+            cout << col << " ";
+        }
+        cout << "\n";
+    }
+}
+
+void nReinasBacktrackingTiempo(int n, vector<int>& solucion) {
+    Clock tiempo;
+    tiempo.start();
+    vector<vector<int>> soluciones;
+    resolverNReinas(0, n, solucion, soluciones);
+    tiempo.stop();
+
+    cout << "Tiempo transcurrido: " << tiempo.elapsed() << " microsegundos\n";
+}
+
+void escribirSolucion(vector<int>& solucion) {
+    for (int col : solucion) {
+        cout << col << " ";
+    }
+    cout << "\n";
+}
